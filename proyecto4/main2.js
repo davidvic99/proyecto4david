@@ -1,12 +1,15 @@
 
 //Zona de variables 
 
-fila1=Array(2,6,5,4,5,5);
+cuad1C=[[2,6,5],[4,6,6],[3,4,1]];
+cuad2C
+
+/*fila1=Array(2,6,5,4,5,5);
 fila2=Array(4,6,6,3,2,6);
 fila3=Array(3,4,1,2,6,3);
 fila4=Array(1,4,2,5,6,1);
 fila5=Array(5,5,3,2,2,1);
-fila6=Array(4,1,4,3,1,3);
+fila6=Array(4,1,4,3,1,3);*/
 
 filacolor1=Array("blue","yellow","pink","red","yellow","blue");
 filacolor2=Array("blue","white","pink","red","yellow","blue");
@@ -36,7 +39,6 @@ aa = 0;
 aaaa=0;
 fila1print = 0;
 filacolorprint = 0;
-z=0
 
 //Zona de funciones
 
@@ -48,17 +50,18 @@ function movimiento(fila,columna) {
   
     }
   
-     else{
-        if((1>fila)||(fila>6)){
+     else if((1>fila)||(fila>6)){
        return false;
   
     }
+  
+  
      if((1>columna)||(columna>6)){
        return false;
   
   
     }
-} 
+  
   
   }
   
@@ -153,7 +156,6 @@ function casillaAleatoria(posInicial, posFinal){
         if (posInicial[i] != posFinal[i]) {
             console.log(posInicial);
             console.log(posFinal);
-            return(posInicial,posFinal)
             break;
         }else{
              
@@ -168,73 +170,75 @@ function casillaAleatoria(posInicial, posFinal){
 
 }
 
+/*
 
-
-function pintartablero(fila1,fila2,fila3,fila4,fila5,fila6,filacolor1,filacolor2,filacolor3,filacolor4,filacolor5,filacolor6,posInicial,posFinal) {
+function pintartablero(fila1,fila2,fila3,fila4,fila5,fila6,filacolor1,filacolor2,filacolor3,filacolor4,filacolor5,filacolor6) {
     
-
+   // document.write("<td><tr> "+ (fila1.sort(function() {return Math.random() - 0.5}) + filacolor1+" <td><tr>"))
    document.write("<table>");
-   document.write("<tr>");
-   for (let i = 0; i < fila1.length; i++) { 
+   
+   for (let i = 0; i < fila1.length; i++) {   
+    document.write("<td><br><tr> "+ fila1[i] + filacolor1[i]+" <td><tr>")  
+     
+     
 
-    document.write(`<td class=${filacolor1[i]}>`+ fila1[i]+"</td>") 
-     
-     
-}
-document.write("</tr>");
-document.write("<tr>");
-for (let i = 0; i < fila1.length; i++) { 
-    coloreamesta = filacolor2[i]
-    document.write(`<td class=${filacolor2[i]}>`+ fila2[i] +"</td>") 
-     
-     
-}
-document.write("</tr>");
-document.write("<tr>");
-for (let i = 0; i < fila1.length; i++) {   
-    document.write(`<td class=${filacolor3[i]}>`+ fila3[i] +"</td>") 
-     
-     
-}
-document.write("</tr>");
-document.write("<tr>");
-for (let i = 0; i < fila1.length; i++) {   
-    document.write(`<td class=${filacolor4[i]}>`+ fila4[i] +"</td>") 
-     
-     
-}
-document.write("</tr>");
-document.write("<tr>");
-for (let i = 0; i < fila1.length; i++) {   
-    document.write(`<td class=${filacolor5[i]}>`+ fila5[i] +"</td>") 
-     
-     z
-}
-document.write("</tr>");
-document.write("<tr>");
-for (let i = 0; i < fila1.length; i++) {   
-    document.write(`<td class=${filacolor6[i]}>`+ fila6[i] +"</td>") 
-     
-     
-}
-document.write("</tr>");
-for (let w = 0; w < fila1.length; w++) {
-    if ( posInicial[0]== w) {
-            for (let Z = 0; Z < fila1.length; Z++) {
-                if(posInicial[1]== Z){
-                    document.write(`<td class=random}>`+ posInicial[0]+posInicial[1] +"</td>") 
-            }
-                
-                
-            }
+  }  
+    document.write("<br>");
+    for (let i = 0; i < fila1.length; i++) {
+        fila2[i] = fila2[i];
+        filacolor2[i] = filacolor2[i];
+       // aaaa = fila1.sort(function() {return Math.random() - 0.5});
+       document.write("<td><tr> "+ (fila2[i]) + filacolor2[i]+" <td><br><tr>")  
         
+       
+
     }
-    
-}
- 
+    document.write("<br>");
+    for (let i = 0; i < fila1.length; i++) {
+        fila3[i] = fila3[i];
+        filacolor3[i] = filacolor3[i];
+       // aaaa = fila1.sort(function() {return Math.random() - 0.5});
+       document.write("<td><tr> "+ (fila3[i]) + filacolor3[i]+" <td><tr>")  
+        
+       
+
+    }
+    document.write("<br>");
+    for (let i = 0; i < fila1.length; i++) {
+        fila4[i] = fila4[i];
+        filacolor4[i] = filacolor4[i];
+       // aaaa = fila1.sort(function() {return Math.random() - 0.5});
+       document.write("<td><tr> "+ (fila4[i]) + filacolor4[i]+" <td><tr>")  
+        
+       
+
+    }
+    document.write("<br>");
+    for (let i = 0; i < fila1.length; i++) {
+        fila5[i] = fila5[i];
+        filacolor4[i] = filacolor4[i];
+       // aaaa = fila1.sort(function() {return Math.random() - 0.5});
+       document.write("<td><tr> "+ (fila5[i]) + filacolor5[i]+" <td><tr>")  
+        
+       
+
+    }
+    document.write("<br>");
+    for (let i = 0; i < fila1.length; i++) {
+        fila6[i] = fila6[i];
+        filacolor6[i] = filacolor6[i];
+       // aaaa = fila1.sort(function() {return Math.random() - 0.5});
+       document.write("<td><tr> "+ (fila6[i]) + filacolor6[i]+" <td><tr>")  
+        
+       
+
+    }
+    document.write("<br>");
+    document.write("<br>");
+    document.write("<br>");
+    document.write("<br>");
     document.write("</table>");
 }
 
-
-pintartablero(fila1,fila2,fila3,fila4,fila5,fila6,filacolor1,filacolor2,filacolor3,filacolor4,filacolor5,filacolor6,posInicial,posFinal) 
-
+pintartablero(fila1,fila2,fila3,fila4,fila5,fila6,filacolor1,filacolor2,filacolor3,filacolor4,filacolor5,filacolor6); 
+*/

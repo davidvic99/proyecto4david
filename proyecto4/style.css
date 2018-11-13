@@ -1,0 +1,38 @@
+table{
+    width: 500px;
+    height:500px;
+}
+ .blue{
+    background:blue;
+    font-size:60px;
+    
+ }
+ .red{
+    background:red;
+    font-size:60px;
+ 
+}
+.pink{
+    background:pink;
+    font-size:60px;
+ 
+}
+.yellow{
+    background:yellow;
+    font-size:60px;
+
+}
+.green{
+    background:green;
+    font-size:60px;
+
+
+}
+.white{
+    background:white;  
+    font-size:60px;
+
+}
+.random{
+    border: 1px solid black;
+}
